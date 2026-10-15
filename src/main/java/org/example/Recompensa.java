@@ -24,12 +24,19 @@ public class Recompensa implements Inventariable{
     }
 
     @Override
+    public String toString() {
+        return "Recompensa [Nombre: " + nombre + ", valor: " + valor + ", tipo: " + tipo + "]";
+    }
+
+    @Override
     public void registrar() {
         // metodo que registra el elemento en el inventario del jugador
+        System.out.println("Recompensa ´" + nombre + "´ registrada en el inventario.");
     }
 
     @Override
     public void borrar() {
         // metodo que elimina el elemento del inventario
+        System.out.println("Recompensa ´" + nombre + "´ eliminada del inventario.");
     }
 }

@@ -10,6 +10,7 @@ public class CheckPoint {
         this.nombre = nombre;
         this.posicionX = x;
         this.posicionY = y;
+        this.activado = false;
     }
 
     public String getNombre() {
@@ -30,5 +31,6 @@ public class CheckPoint {
 
     public void activar(){
         activado = true;
+        System.out.println("CheckPoint '" + nombre + "' ha sido activado en la posición (" + posicionX + ", " + posicionY + ").");
     }
 }

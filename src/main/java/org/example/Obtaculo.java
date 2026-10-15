@@ -5,12 +5,14 @@ public class Obtaculo implements Destruible{
     private int dano;
     private int posicionX;
     private int posicionY;
+    private boolean destruido;
 
     public Obtaculo(String nombre, int dano, int x, int y){
         this.nombre = nombre;
         this.dano = dano;
         this.posicionX = x;
         this.posicionY = y;
+        this.destruido = false;
     }
 
     public String getNombre() {
@@ -32,5 +34,7 @@ public class Obtaculo implements Destruible{
     @Override
     public void destruye() {
         // metodo que ejecuta la logica de destruccion del elemento
+        destruido = true;
+        System.out.println("El obstáculo " + nombre + " ha sido destruido.");
     }
 }

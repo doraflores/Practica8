@@ -2,12 +2,12 @@ package org.example;
 
 public class Arma implements  Inventariable{
     private String nombre;
-    private int daño;
+    private int dano;
     private double alcance;
 
-    public Arma(String nombre, int daño, double alcance){
+    public Arma(String nombre, int dano, double alcance){
         this.nombre = nombre;
-        this.daño = daño;
+        this.dano = dano;
         this.alcance = alcance;
     }
 
@@ -15,8 +15,8 @@ public class Arma implements  Inventariable{
         return nombre;
     }
 
-    public int getDaño() {
-        return daño;
+    public int getDano() {
+        return dano;
     }
 
     public double getAlcance() {
@@ -24,12 +24,19 @@ public class Arma implements  Inventariable{
     }
 
     @Override
+    public String toString() {
+        return "Arma [Nombre: " + nombre + ", Daño: " + dano + ", Alcance: " + alcance + "]";
+    }
+
+    @Override
     public void registrar() {
         // metodo que registra el elemento en el inventario del jugador
+        System.out.println("Arma '" + nombre + "' registrada en el inventario.");
     }
 
     @Override
     public void borrar() {
         // metodo que elimina el elemento del inventario
+        System.out.println("Arma '" + nombre + "' eliminada del inventario.");
     }
 }

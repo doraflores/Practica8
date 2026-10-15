@@ -24,13 +24,13 @@ public class Inventario {
         // Agrega un item, retorna true si fue exitoso
         if(items.size() < capacidadMaxima){
             items.add(item);
-            item.registrar;
+            item.registrar();
             return true;
         }
         return false;
     }
 
-    public boolean eliminarItem(Inventario item){
+    public boolean eliminarItem(Inventariable item){
         // Elimina un item, retorna true si fue exitoso
         if(items.remove(item)){
             item.borrar();
